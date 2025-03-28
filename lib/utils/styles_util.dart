@@ -10,84 +10,66 @@ class AppStyles {
   static const Color slate50 = Color(0xFFF8FAFC);
   static const Color red500 = Color(0xFFEF4444);
   static const Color red900 = Color(0xFF7F1D1D);
-  
+
   // Gradient
   static const LinearGradient primaryGradient = LinearGradient(
     colors: [primary, secondary],
     begin: Alignment.centerLeft,
     end: Alignment.centerRight,
   );
-  
+
   // Text styles
   static TextStyle get headingLarge => const TextStyle(
     fontSize: 28,
     fontWeight: FontWeight.bold,
     letterSpacing: 0.5,
   );
-  
-  static TextStyle get headingMedium => const TextStyle(
-    fontSize: 24,
-    fontWeight: FontWeight.bold,
-  );
-  
-  static TextStyle get headingSmall => const TextStyle(
-    fontSize: 20,
-    fontWeight: FontWeight.w600,
-  );
-  
-  static TextStyle get bodyLarge => const TextStyle(
-    fontSize: 16,
-    fontWeight: FontWeight.normal,
-  );
-  
-  static TextStyle get bodyMedium => const TextStyle(
-    fontSize: 14,
-    fontWeight: FontWeight.normal,
-  );
-  
-  static TextStyle get bodySmall => const TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.normal,
-  );
-  
+
+  static TextStyle get headingMedium =>
+      const TextStyle(fontSize: 24, fontWeight: FontWeight.bold);
+
+  static TextStyle get headingSmall =>
+      const TextStyle(fontSize: 20, fontWeight: FontWeight.w600);
+
+  static TextStyle get bodyLarge =>
+      const TextStyle(fontSize: 16, fontWeight: FontWeight.normal);
+
+  static TextStyle get bodyMedium =>
+      const TextStyle(fontSize: 14, fontWeight: FontWeight.normal);
+
+  static TextStyle get bodySmall =>
+      const TextStyle(fontSize: 12, fontWeight: FontWeight.normal);
+
   // Button styles
   static ButtonStyle primaryButtonStyle = ElevatedButton.styleFrom(
     backgroundColor: primary,
     foregroundColor: Colors.white,
     elevation: 0,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
   );
-  
+
   static ButtonStyle secondaryButtonStyle = ElevatedButton.styleFrom(
     backgroundColor: const Color(0xFFF1F5F9), // slate-100
     foregroundColor: slate900,
     elevation: 0,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
   );
-  
+
   static ButtonStyle outlineButtonStyle = OutlinedButton.styleFrom(
     foregroundColor: slate900,
     side: const BorderSide(color: Color(0xFFE2E8F0)), // slate-200
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
   );
-  
+
   static ButtonStyle ghostButtonStyle = TextButton.styleFrom(
     foregroundColor: slate900,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
+    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
     padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
   );
-  
+
   // Card styles
   static BoxDecoration cardDecoration = BoxDecoration(
     color: Colors.white,
@@ -101,7 +83,7 @@ class AppStyles {
       ),
     ],
   );
-  
+
   static BoxDecoration cardDecorationDark = BoxDecoration(
     color: slate800,
     borderRadius: BorderRadius.circular(12),
@@ -114,7 +96,7 @@ class AppStyles {
       ),
     ],
   );
-  
+
   // Input styles
   static InputDecoration inputDecoration = InputDecoration(
     filled: true,
@@ -133,12 +115,12 @@ class AppStyles {
     ),
     contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
   );
-  
+
   // Helper methods
   static BoxDecoration getCardDecoration(bool isDarkMode) {
     return isDarkMode ? cardDecorationDark : cardDecoration;
   }
-  
+
   static Color getButtonColor(String variant, bool isDarkMode) {
     switch (variant) {
       case 'default':
@@ -157,7 +139,7 @@ class AppStyles {
         return isDarkMode ? slate50 : slate900;
     }
   }
-  
+
   static Size getButtonSize(String size) {
     switch (size) {
       case 'sm':
@@ -171,7 +153,6 @@ class AppStyles {
     }
   }
 }
-
 
 class StylesUtil {
   static BoxDecoration roundedBoxDecoration({
@@ -191,10 +172,6 @@ class StylesUtil {
     FontWeight fontWeight = FontWeight.normal,
     Color color = Colors.black,
   }) {
-    return TextStyle(
-      fontSize: fontSize,
-      fontWeight: fontWeight,
-      color: color,
-    );
+    return TextStyle(fontSize: fontSize, fontWeight: fontWeight, color: color);
   }
 }

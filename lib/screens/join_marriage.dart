@@ -11,8 +11,8 @@ class JoinMarriage extends StatelessWidget {
   const JoinMarriage({
     required this.authenticated,
     required this.onJoin,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

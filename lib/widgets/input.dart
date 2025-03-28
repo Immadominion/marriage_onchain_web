@@ -13,8 +13,8 @@ class CustomInput extends StatelessWidget {
     required this.placeholder,
     this.icon,
     required this.controller,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

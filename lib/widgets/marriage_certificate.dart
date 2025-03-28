@@ -20,8 +20,8 @@ class MarriageCertificate extends StatelessWidget {
     required this.maidOfHonor,
     required this.bestMan,
     required this.officiant,
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
